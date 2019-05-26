@@ -2,7 +2,7 @@
 	"name": "backend",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Web application",
+	"description": "Web applicationgit",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
@@ -15,9 +15,16 @@
 	"author": "Lavon Stalling",
 	"license": "ISC",
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"concurrently": "^4.1.0",
 		"cors": "^2.8.5",
+		"dotenv": "^8.0.0",
 		"express": "^4.17.1",
+		"express-session": "^1.16.1",
+		"express-validator": "^5.3.1",
 		"helmet": "^3.18.0",
+		"knex": "^0.16.5",
+		"knex-migrate": "^1.7.2",
 		"morgan": "^1.9.1"
 	}
 }
