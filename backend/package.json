@@ -2,7 +2,7 @@
 	"name": "backend",
 	"version": "1.0.0",
 	"private": true,
-	"description": "Web applicationgit",
+	"description": "Web application",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
