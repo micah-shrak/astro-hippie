@@ -4,6 +4,8 @@
 	"description": "AstroHippie Web Application Server",
 	"main": "index.js",
 	"scripts": {
+		"start": "nodemon index.js",
+		"server": "nodemon index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
@@ -12,7 +14,7 @@
 		"url": "git+https://github.com/micah-shrak/astro-hippie.git"
 	},
 	"author": "Lavon Stalling",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"auth0": "^2.17.1",
 		"bcryptjs": "^2.4.3",
