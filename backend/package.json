@@ -1,12 +1,35 @@
 {
 	"name": "backend",
 	"version": "1.0.0",
-	"description": "Astrology Journal Web Application Server",
+	"description": "AstroHippie Web Application Server",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/micah-shrak/astro-hippie.git"
+	},
 	"author": "Lavon Stalling",
-	"license": "ISC"
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"concurrently": "^4.1.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.0.0",
+		"express": "^4.17.1",
+		"express-session": "^1.16.1",
+		"express-validator": "^5.3.1",
+		"helmet": "^3.18.0",
+		"jsonwebtoken": "^8.5.1",
+		"knex": "^0.17.3",
+		"knex-migrate": "^1.7.2",
+		"morgan": "^1.9.1",
+		"pg": "^7.11.0"
+	},
+	"devDependencies": {
+		"jest": "^24.8.0",
+		"nodemon": "^1.19.1"
+	}
 }
