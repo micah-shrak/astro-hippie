@@ -1,0 +1,12 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "Astrology Journal Web Application Server",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Lavon Stalling",
+	"license": "ISC"
+}
