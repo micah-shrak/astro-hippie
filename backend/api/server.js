@@ -1,8 +1,8 @@
-import express from 'express';
-import helmet from 'helmet';
-import cors from 'cors';
+const express = require('express');
+const helmet = require('helmet');
+const cors = require('cors');
 
-const server = expres();
+const server = express();
 
 server.use(express.json());
 server.use(helmet());
