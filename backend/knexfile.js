@@ -1,44 +1,43 @@
-// Update with your config settings.
+// Config settings with local postgres dev and Heroku postgres production
+require('dotenv').config();
 
-module.exports = {
+const localPostgres = {
+	host: process.env.HOST,
+	database: process.env.DATABASE,
+	user: process.env.USER,
+	port: process.env.PORT,
+	password: process.env.PASS || '',
+};
 
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './dev.sqlite3'
-    }
-  },
+const dbConnection = process.env.DATABASE_URL || localPostgres;
 
-  staging: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  },
-
-  production: {
-    client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
-    pool: {
-      min: 2,
-      max: 10
-    },
-    migrations: {
-      tableName: 'knex_migrations'
-    }
-  }
-
+export const development = {
+	client: 'pg',
+	connection: dbConnection,
+	pool: {
+		min: 2,
+		max: 10,
+	},
+	migrations: {
+		directory: './database/migrations',
+		tableName: 'ahdev_migrations',
+	},
+	seeds: {
+		directory: './database/development/seeds',
+	},
+};
+export const production = {
+	client: 'pg',
+	connection: dbConnection,
+	pool: {
+		min: 2,
+		max: 10,
+	},
+	migrations: {
+		directory: './database/migrations',
+		tableName: 'ahprod_migrations',
+	},
+	seeds: {
+		directory: './database/productions/seeds',
+	},
 };
