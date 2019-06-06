@@ -11,7 +11,7 @@ const localPostgres = {
 
 const dbConnection = process.env.DATABASE_URL || localPostgres;
 
-export const development = {
+const development = {
 	client: 'pg',
 	connection: dbConnection,
 	pool: {
@@ -26,7 +26,7 @@ export const development = {
 		directory: './database/development/seeds',
 	},
 };
-export const production = {
+const production = {
 	client: 'pg',
 	connection: dbConnection,
 	pool: {
@@ -40,4 +40,9 @@ export const production = {
 	seeds: {
 		directory: './database/productions/seeds',
 	},
+};
+
+module.exports = {
+	development,
+	production,
 };
