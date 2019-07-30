@@ -1,4 +1,4 @@
-require('dotenv').config(); // load .env variables
+require('dotenv').config(); // load .env variable settings into Node
 
 const server = require('./api/server.js');
 
