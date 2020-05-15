@@ -8,11 +8,11 @@ const server = express();
 server.use(express.json()); // used to parse JSON bodies
 server.use(helmet()); // helps to set HTTP headers for app protection
 server.use(morgan("combined")); // logger standard apache combines log output
-server.use(cors());
+server.use(cors()); // handles cross-origin requests
 
 // Check the server
 server.get("/", (req, res) => {
-  res.send("Coffee time...");
+  res.send("Let's see what you got...");
 });
 
 // The rest of the routes/endpoints
